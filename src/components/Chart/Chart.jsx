@@ -11,6 +11,7 @@ import './Chart.css';
 const Charts = ({data,country})=>{
 
 const[dailyData,setDailyData] = useState([]);
+console.log(dailyData);
 
 useEffect(()=>{
 
@@ -31,9 +32,7 @@ useEffect(()=>{
 
 const LineChart = (
 
-    dailyData.length ?
-    
-    <Line
+    dailyData ? <Line
     
     data={{
         labels: dailyData.map((data)=>{return data.date}) ,
